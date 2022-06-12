@@ -4,7 +4,7 @@ import { reactive, toRefs } from "vue";
 const data = reactive({
   navList: [
     {
-      link: "/home",
+      link: "/",
       name: "home",
     },
     {
@@ -25,7 +25,7 @@ const { navList } = toRefs(data);
   <div class="mx-auto flex h-40 w-4/5 flex-row">
     <router-link
       to="/"
-      class="inline-flex basis-1/6 items-center justify-center rounded-md border border-transparent px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
+      class="inline-flex basis-1/6 items-center justify-center rounded-md border border-transparent px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:border-indigo-500 focus:outline-none"
     >
       <img
         src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f2b060c7a92408bac811_logo.svg"
