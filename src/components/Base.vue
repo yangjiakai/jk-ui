@@ -5,8 +5,8 @@ const data = reactive({
   reactiveValue: "A",
 });
 
-const refValue = ref(0);
-const { reactiveValue } = toRefs(data);
+// const refValue = ref(0);
+// const { reactiveValue } = toRefs(data);
 </script>
 
 <template>

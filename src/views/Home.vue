@@ -1,22 +1,243 @@
 <script setup>
 import ButtonRepo from "@/components/ButtonRepo.vue";
+import Model from "../components/Modal/index.vue";
+import { ref } from "vue";
+
+let num = ref(0);
+
+let isVisible = ref(false);
+const changeVisible = () => {
+  isVisible.value = !isVisible.value;
+  console.log(!isVisible.value);
+};
+
+// 切换modal
+let isShow = ref(true);
+const changeShow = () => {
+  isShow.value = !isShow.value;
+  console.log(!isShow);
+};
+
+const closeModal = () => {
+  isShow.value = false;
+};
+
+let isShow1 = ref(false);
+
+const onOk1 = () => {
+  value1.value = "修正value1";
+  isShow1.value = false;
+};
+
+let value1 = ref("初始value1");
+
+const onCancel1 = () => {
+  isShow1.value = false;
+};
+
+let isShow2 = ref(false);
+
+const onOk2 = () => {
+  value2.value = "修正value2";
+  isShow2.value = false;
+};
+
+const onCancel2 = () => {
+  isShow2.value = false;
+};
+
+let value2 = ref("初始value2");
 </script>
 
 <template>
-  <div class="bg-gray-50">
-    <div
-      class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
-    >
-      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <div class="inline-flex rounded-md shadow">
-          <router-link
-            to="/about"
-            class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out hover:bg-indigo-500 focus:outline-none"
-            >Next Page</router-link
-          >
-        </div>
-        <ButtonRepo />
-      </div>
+  <div class="home-page">
+    <!-- 控制区域 -->
+    <h1>Modal切换区域</h1>
+    <div class="control-area">
+      <button @click="isShow1 = true">切换modal</button>
+      <button @click="isShow2 = true">切换modal2</button>
+      <button>切换modal3</button>
+      <button>切换modal4</button>
+    </div>
+    <hr />
+    <!-- 显示区域 -->
+
+    <div class="display-area">
+      <Model :isShow="isShow1" :onOk="onOk1" :onCancel="onCancel1">
+        <input type="text" v-model="value1" />
+        <p>
+          Lorem ipsum dolor sit amet, semper quis, sapien id natoque elit.
+          Nostra urna at, magna at neque sed sed ante imperdiet, dolor mauris
+          cursus velit, velit non, sem nec. Volutpat sem ridiculus placerat leo,
+          augue in, duis erat proin condimentum in a eget, sed fermentum sed
+          vestibulum varius ac, vestibulum volutpat orci ut elit eget tortor.
+          Ultrices nascetur nulla gravida ante arcu. Pharetra rhoncus morbi
+          ipsum, nunc tempor debitis, ipsum pellentesque, vitae id quam ut
+          mauris dui tempor, aptent non. Quisque turpis. Phasellus quis lectus
+          luctus orci eget rhoncus. Amet donec vestibulum mattis commodo, nulla
+          aliquet, nibh praesent, elementum nulla. Sit lacus pharetra tempus
+          magna neque pellentesque, nulla vel erat. Justo ex quisque nulla
+          accusamus venenatis, sed quis. Nibh phasellus gravida metus in, fusce
+          aenean ut erat commodo eros. Ut turpis, dui integer, nonummy pede
+          placeat nec in sit leo. Faucibus porttitor illo taciti odio, amet
+          viverra scelerisque quis quis et tortor, curabitur morbi a. Enim
+          tempor at, rutrum elit condimentum, amet rutrum vitae tempor torquent
+          nunc. Praesent vestibulum integer maxime felis. Neque aenean quia
+          vitae nostra, tempus elit enim id dui, at egestas pulvinar. Integer
+          libero vestibulum, quis blandit scelerisque mattis fermentum nulla,
+          tortor donec vestibulum dolor amet eget, elit nullam. Aliquam leo
+          phasellus aliquam curabitur metus a, nulla justo mattis duis interdum
+          vel, mollis vitae et id, vestibulum erat ridiculus sit pulvinar justo
+          sed. Vehicula convallis, et nulla wisi, amet vestibulum risus, quam ac
+          egestas. Et vitae, nulla gravida erat scelerisque nullam nunc
+          pellentesque, a dictumst cras augue, purus imperdiet non. Varius
+          montes cursus varius vel tortor, nec leo a qui, magni cras, velit vel
+          consectetuer lobortis vel. Nibh erat et wisi felis leo porttitor,
+          sapien nibh sapien pede mi, sed eget porttitor, repellendus arcu ac
+          quis. Luctus vulputate aut est sem magna, placerat accumsan nunc
+          vestibulum ipsum ac auctor, maecenas lorem in ut nec mauris tortor,
+          doloribus varius sem tortor vestibulum mollis, eleifend tortor felis
+          tempus lacus eu eu. Eleifend vel eu, nullam maecenas mauris nec nunc
+          euismod, tortor porta ridiculus potenti, massa tristique nam magna, et
+          wisi placerat et erat ante. Eget pede erat in facilisis, fermentum
+          venenatis sodales. Ac tortor sociis et non animi tristique, rhoncus
+          malesuada, ut arcu volutpat scelerisque sollicitudin, elit curabitur
+          dui pede purus dolor, integer aenean risus taciti nulla eleifend
+          accumsan. At pulvinar diam parturient, interdum mi velit aliquet et a.
+          Arcu at ac placerat eget justo semper, purus sociis curabitur mi ipsum
+          consequat ut, mollis vestibulum, est ante ornare lacus sem. Neque
+          magna mauris, commodo quisque, praesent semper suscipit lobortis nam.
+          Justo malesuada cursus ac nunc litora nunc. Tellus ac, in lobortis
+          nunc, montes lectus purus fermentum. Ac sit wisi. Sodales aliquam, sed
+          vestibulum nullam arcu sit risus arcu, id luctus vitae lorem nibh,
+          integer nec nullam class cursus mi, purus arcu lectus. Vel ante
+          suscipit volutpat potenti mattis sed, wisi eu placerat aliquam erat,
+          lectus morbi lobortis at assumenda. Consequat neque purus ipsum
+          voluptas odio, netus vestibulum ut nec, suspendisse pellentesque nec
+          enim in. Wisi dictum sed semper a, ipsum erat tellus habitasse est,
+          erat sem ornare, vitae quisque ultricies. Dui sed blandit. Tempor et
+          faucibus justo sed luctus, nec vitae vitae. Nunc nibh pede, ipsum
+          vestibulum aenean leo ante ultricies, nam cras quis sed penatibus
+          amet. In mauris a. Integer metus mauris tortor, et rutrum vestibulum
+          ultricies, ut phasellus in ullamcorper ut mollit, eu justo. Cursus
+          pretium venenatis. Cras pellentesque vel sodales accumsan aenean.
+          Feugiat metus sit nec in aliquet amet, porttitor pretium vulputate
+          massa. Consequat ipsum luctus quisque adipiscing libero. Wisi
+          sollicitudin. Eget vitae ac lobortis, lorem natoque vestibulum et,
+          aliquet faucibus at morbi nibh, vel condimentum. Massa unde orci sed
+          id sed, odio donec congue nec praesent amet. Hymenaeos velit lacus,
+          quis vivamus libero tempus duis, eu nisi eu, ipsum at accumsan pede
+          justo morbi donec, massa et libero sit risus neque tortor. Ut sed sed
+          etiam hendrerit dapibus, quis metus suspendisse nibh. Fringilla tempor
+          felis augue magna. Cum arcu a, id vitae. Pellentesque pharetra in cras
+          sociis adipiscing est. Nibh nec mattis at maecenas, nisl orci aliquam
+          nulla justo egestas venenatis, elementum duis vel porta eros, massa
+          vitae, eligendi imperdiet amet. Nec neque luctus suscipit, justo sem
+          praesent, ut nisl quisque, volutpat torquent wisi tellus aliquam
+          reprehenderit, curabitur cras at quis massa porttitor mauris. Eros sed
+          ultrices. Amet dignissim justo urna feugiat mauris litora, etiam
+          accumsan, lobortis a orci suspendisse. Semper ac mauris, varius
+          bibendum pretium, orci urna nunc ullamcorper auctor, saepe sem integer
+          quam, at feugiat egestas duis. Urna ligula ante. Leo elementum
+          nonummy. Sagittis mauris est in ipsum, nulla amet non justo, proin id
+          potenti platea posuere sit ut, nunc sit erat bibendum. Nibh id auctor,
+          ab nulla vivamus ultrices, posuere morbi nunc tellus gravida vivamus.
+          Mauris nec, facilisi quam fermentum, ut mauris integer, orci tellus
+          tempus diam ut in pellentesque. Wisi faucibus tempor et odio leo diam,
+          eleifend quis integer curabitur sit scelerisque ac, mauris consequat
+          luctus quam penatibus fringilla dis, vitae lacus in, est eu ac tempus.
+          Consectetuer amet ipsum amet dui, sed blandit id sed. Tellus integer,
+          dignissim id pede sodales quis, felis dolorem id mauris orci, orci
+          tempus ut. Nullam hymenaeos. Curabitur in a, tortor ut praesent
+          placerat tincidunt interdum, ac dignissim metus nonummy hendrerit
+          wisi, etiam ut. Semper praesent integer fusce, tortor suspendisse,
+          augue ligula orci ante asperiores ullamcorper. In sit per mi sed sed,
+          mi vestibulum mus nam, morbi mauris neque vitae aliquam proin
+          senectus. Ac amet arcu mollis ante congue elementum, inceptos eget
+          optio quam pellentesque quis lobortis, sollicitudin sed vestibulum
+          sollicitudin, lectus parturient nullam, leo orci ligula ultrices. At
+          tincidunt enim, suspendisse est sit sem ac. Amet tellus molestie est
+          purus magna augue, non etiam et in wisi id. Non commodo, metus lorem
+          facilisi lobortis ac velit, montes neque sed risus consectetuer
+          fringilla dolor. Quam justo et integer aliquam, cursus nulla enim
+          orci, nam cursus adipiscing, integer torquent non, fringilla per
+          maecenas. Libero ipsum sed tellus purus et. Duis molestie placerat
+          erat donec ut. Dolor enim erat massa faucibus ultrices in, ante
+          ultricies orci lacus, libero consectetuer mauris magna feugiat neque
+          dapibus, donec pretium et. Aptent dui, aliquam et et amet nostra
+          ligula. Augue curabitur duis dui volutpat, tempus sed ut pede donec.
+          Interdum luctus, lectus nulla aenean elit, id sit magna, vulputate
+          ultrices pellentesque vel id fermentum morbi. Tortor et. Adipiscing
+          augue lorem cum non lacus, rutrum sodales laoreet duis tortor, modi
+          placerat facilisis et malesuada eros ipsum, vehicula tempus. Ac
+          vivamus amet non aliquam venenatis lectus, sociosqu adipiscing
+          consequat nec arcu odio. Blandit orci nec nec, posuere in pretium,
+          enim ut, consectetuer nullam urna, risus vel. Nullam odio vehicula
+          massa sed, etiam sociis mauris, lacus ullamcorper, libero imperdiet
+          non sodales placerat justo vehicula. Nec morbi imperdiet. Fermentum
+          sem libero iaculis bibendum et eros, eget maecenas non nunc, ad
+          pellentesque. Ut nec diam elementum interdum. Elementum vitae tellus
+          lacus vitae, ipsum phasellus, corporis vehicula in ac sed massa
+          vivamus, rutrum elit, ultricies metus volutpat. Semper wisi et,
+          sollicitudin nunc vestibulum, cursus accumsan nunc pede tempus mi
+          ipsum, ligula sed. Non condimentum ac dolor sit. Mollis eu aliquam,
+          vel mattis mollis massa ut dolor ante, tempus lacinia arcu. Urna
+          vestibulum lorem, nulla fermentum, iaculis ut congue ac vivamus. Nam
+          libero orci, pulvinar nulla, enim pellentesque consectetuer leo,
+          feugiat rhoncus rhoncus vel. Magna sociosqu donec, dictum cursus
+          ullamcorper viverra. Ultricies quis orci lorem, suspendisse ut
+          vestibulum integer, purus sed lorem pulvinar habitasse turpis. +
+        </p>
+      </Model>
+      <Model :isShow="isShow2" :onOk="onOk2" :onCancel="onCancel2">
+        <input type="text" v-model="value2" />
+      </Model>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.home-page {
+  padding: 5rem;
+  background-color: #fff;
+  h1 {
+    color: #333;
+  }
+  .control-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+
+    button {
+      margin-right: 0.5rem;
+      background-color: #3271ae;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transition: 0.5s ease-in-out;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+    }
+  }
+
+  .display-area {
+    padding: 5rem;
+    .modal-area {
+      z-index: 999;
+      background: linear-gradient(135deg, #5b247a, #1bcedf);
+      height: 300px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      h1 {
+        padding: 5rem;
+        text-align: center;
+      }
+    }
+  }
+}
+</style>

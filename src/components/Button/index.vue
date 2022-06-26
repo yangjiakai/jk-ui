@@ -5,8 +5,8 @@ const data = reactive({
   reactiveValue: "A",
 });
 
-const refValue = ref(0);
-const { reactiveValue } = toRefs(data);
+// const refValue = ref(0);
+// const { reactiveValue } = toRefs(data);
 
 // 计算属性 --------
 const isDisable = computed(() => props.disabled);
@@ -55,7 +55,7 @@ const props = defineProps({
   </button>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .jk-button {
   background-color: v-bind(color);
 }
@@ -63,7 +63,8 @@ const props = defineProps({
 .is-plain {
   background-color: transparent;
   border: 1px solid v-bind(color);
-  color: v-bind(color);
+  //   color: v-bind(color);
+  color: $font-color;
 }
 
 .is-round {

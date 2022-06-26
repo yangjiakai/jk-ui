@@ -1,0 +1,19 @@
+/*抽屉*/
+.drawer-left-enter-active,
+.drawer-left-leave-active {
+  transition: transform 0.3s ease;
+}
+.drawer-left-enter-from,
+.drawer-left-leave-to {
+  transform: translateX(100%);
+}
+
+// 渐隐渐显
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease-in;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

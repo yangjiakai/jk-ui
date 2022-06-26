@@ -1,0 +1,26 @@
+@import './transition.scss';
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  color: aliceblue;
+  height: 100%;
+  background-image: linear-gradient(252.99deg, #4e6092 2.59%, #1e2338 98.72%);
+}
+
+
+.jk-mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}

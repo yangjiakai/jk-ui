@@ -12,4 +12,20 @@ export default defineConfig({
   server: {
     open: true,
   },
+  // css: {
+  //   loaderOptions: {
+  //     scss: {
+  //       additionalData: '@import "@/assets/scss/variables.scss";',
+  //     }
+  //   }
+  // },
+  css: {
+    /* CSS 预处理器 */
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/assets/styles/global.scss";'
+      }
+    }
+  },
+
 })
