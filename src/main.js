@@ -5,6 +5,8 @@ import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 import './assets/styles/style.scss'
 
+
+
 const app = createApp(App)
 
 const router = createRouter({

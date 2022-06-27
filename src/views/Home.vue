@@ -1,6 +1,7 @@
 <script setup>
 import ButtonRepo from "@/components/ButtonRepo.vue";
 import Model from "../components/Modal/index.vue";
+import jkButton from "@/components/Button/index.vue";
 import { ref } from "vue";
 
 let num = ref(0);
@@ -54,10 +55,12 @@ let value2 = ref("初始value2");
     <!-- 控制区域 -->
     <h1>Modal切换区域</h1>
     <div class="control-area">
-      <button @click="isShow1 = true">切换modal</button>
-      <button @click="isShow2 = true">切换modal2</button>
-      <button>切换modal3</button>
-      <button>切换modal4</button>
+      <jk-button @click="isShow1 = true" size="lg" dark type="info"
+        >切换modal1</jk-button
+      >
+      <jk-button @click="isShow2 = true" size="lg" dark type="info"
+        >切换modal2</jk-button
+      >
     </div>
     <hr />
     <!-- 显示区域 -->
@@ -208,21 +211,6 @@ let value2 = ref("初始value2");
     justify-content: space-around;
     align-items: center;
     padding: 5rem;
-
-    button {
-      margin-right: 0.5rem;
-      background-color: #3271ae;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
-        rgba(0, 0, 0, 0.24) 0px 1px 2px;
-      transition: 0.5s ease-in-out;
-      &:hover {
-        transition: 0.5s ease-in-out;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-      }
-    }
   }
 
   .display-area {

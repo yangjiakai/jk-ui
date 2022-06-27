@@ -6,7 +6,7 @@ body {
 }
 
 #app {
-  color: aliceblue;
+  color: #000;
   height: 100%;
   background-image: linear-gradient(252.99deg, #4e6092 2.59%, #1e2338 98.72%);
 }
@@ -23,4 +23,14 @@ body {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.display-area{
+  background-color: #fff;
+  padding: 1rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
 }

@@ -1,5 +1,6 @@
 <script setup>
 import { watch } from "vue";
+import jkButton from "@/components/Button/index.vue";
 
 // 组件传值属性--------
 const props = defineProps({
@@ -43,8 +44,18 @@ const cancel = () => {
           </div>
           <hr class="jk-hr" />
           <div class="jk-modal-footer">
-            <button @click="cancel">cancel</button>
-            <button @click="ok">ok</button>
+            <jk-button
+              class="mr-2"
+              @click="cancel"
+              dark
+              type="primary"
+              size="lg"
+            >
+              cancel
+            </jk-button>
+            <jk-button @click="ok" type="primary" dark size="lg">
+              ok
+            </jk-button>
           </div>
         </div>
       </div>
@@ -80,22 +91,6 @@ const cancel = () => {
     justify-content: flex-end;
     align-items: center;
     padding: 1rem;
-    button {
-      width: 100px;
-      background-color: #3271ae;
-      padding: 0.5rem;
-      margin: 0 0.5rem;
-      border-radius: 0.5rem;
-      color: #fff;
-      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
-        rgba(0, 0, 0, 0.24) 0px 1px 2px;
-      transition: 0.5s ease-in-out;
-      &:hover {
-        transition: 0.5s ease-in-out;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-      }
-    }
   }
 }
 

@@ -1,0 +1,53 @@
+Arguments: 
+  D:\nodejs\node.exe C:\Users\yjk40\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add -D @iconify/json
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\nodejs\;D:\Git\cmd;C:\Program Files\dotnet\;C:\Users\yjk40\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\yjk40\AppData\Local\GitHubDesktop\bin;C:\Users\yjk40\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\Github\vue3\YUI\node_modules\esbuild-windows-64\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "vite-vue3-tailwind-starter",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite --host",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "@vueuse/core": "^8.7.5",
+      "vue": "^3.2.37",
+      "vue-router": "^4.0.15"
+    },
+    "devDependencies": {
+      "@headlessui/vue": "^1.6.4",
+      "@heroicons/vue": "^1.0.6",
+      "@tailwindcss/aspect-ratio": "^0.4.0",
+      "@tailwindcss/forms": "^0.5.2",
+      "@tailwindcss/line-clamp": "^0.4.0",
+      "@tailwindcss/typography": "^0.5.2",
+      "@vitejs/plugin-vue": "^2.3.3",
+      "autoprefixer": "^10.4.7",
+      "prettier-plugin-tailwindcss": "^0.1.11",
+      "sass": "^1.52.3",
+      "tailwindcss": "^3.1.0",
+      "vite": "^2.9.10"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

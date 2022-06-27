@@ -7,12 +7,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^8.7.5",
     "vue": "^3.2.37",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.6.4",
     "@heroicons/vue": "^1.0.6",
+    "@iconify-json/carbon": "^1.1.5",
+    "@iconify/vue": "^3.2.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
@@ -22,6 +25,8 @@
     "prettier-plugin-tailwindcss": "^0.1.11",
     "sass": "^1.52.3",
     "tailwindcss": "^3.1.0",
+    "unplugin-icons": "^0.14.5",
+    "unplugin-vue-components": "^0.20.1",
     "vite": "^2.9.10"
   }
 }
