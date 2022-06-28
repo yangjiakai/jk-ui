@@ -14,7 +14,7 @@ import CommonHeader from "@/components/CommonHeader.vue";
     <header class="bg-transparent shadow" v-if="$route.meta.title">
       <CommonHeader></CommonHeader>
     </header>
-    <main class="main mx-auto w-4/5 p-5">
+    <main class="main container mx-auto w-4/5 p-5">
       <router-view />
     </main>
   </div>

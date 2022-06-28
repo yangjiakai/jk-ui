@@ -1,6 +1,7 @@
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import ButtonPage from './views/ButtonPage.vue'
+import TablePage from './views/TablePage.vue'
 import NotFound from './views/NotFound.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
@@ -20,6 +21,11 @@ export const routes = [
     path: '/buttonPage',
     meta: { title: 'buttonPage' },
     component: ButtonPage,
+  },
+  {
+    path: '/tablePage',
+    meta: { title: 'tablePage' },
+    component: TablePage,
   },
   { path: '/:path(.*)', component: NotFound },
 ]
