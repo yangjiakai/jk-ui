@@ -12,7 +12,21 @@ body {
   color: #000;
   height: 100%;
   background-image: linear-gradient(252.99deg, #4e6092 2.59%, #1e2338 98.72%);
-
+  overflow-y: scroll;
+  &::-webkit-scrollbar{ 
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.06);
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+  }
+  /* 滚动条滑块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(0,0,0,0.12);
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+  }
 }
 
 .main{
@@ -35,13 +49,13 @@ body {
 
 .display-area{
   background-color: #fff;
-  height: 2000px;
+  min-height: 2000px;
   padding: 1rem;
   min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  overflow: hidden;
+ 
 }
 
 
