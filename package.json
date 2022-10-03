@@ -12,7 +12,7 @@
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
-    "@headlessui/vue": "^1.6.4",
+    "@headlessui/vue": "^1.7.3",
     "@heroicons/vue": "^1.0.6",
     "@iconify-json/carbon": "^1.1.5",
     "@iconify/vue": "^3.2.1",
